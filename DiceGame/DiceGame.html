@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dice Game - COMP2132</title>
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/diceGame.js" defer></script>
+    
+</head>
+<body>
+    
+    <main>
+        <div id="author">Author: Nastaran Ebadifard</div>
+        <section class="player player--0 player--active">
+            <h2 class="name" id="name--0">Player 1</h2>
+            <div class="current">
+                <p class="current-label">Accumulated Total Score</p>
+                <p class="current-score" id="current--0"></p>
+                <div id="output1"></div>
+            </div>
+        </section>
+        <section class="player player--1">
+            <h2 class="name" id="name--1">Player 2</h2>
+            <div class="current">
+                <p class="current-label">Accumulated Total Score</p>
+                <p class="current-score" id="current--1"></p>
+                <div id="output2"></div>
+            </div>
+        </section>
+
+        <div id="final-results" class="hidden"></div>
+        <div id="round" class="hidden"></div>
+
+        <button id="rollButton">Dice Roll</button>
+        <button id="resetButton">Reset Game</button>
+    </main>
+</body>
+</html>
