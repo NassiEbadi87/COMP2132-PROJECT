@@ -20,10 +20,10 @@ body {
     font-weight: 400;
     height: 100vh;
     color: #333;
-    background-image: linear-gradient(to top left, #35734f 0%, #34bf3e 100%);
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url('product-images/background.jpg');
 }
 
 /* LAYOUT */
@@ -60,7 +60,7 @@ strong {
 
 .player {
     flex: 50%;
-    padding: 9rem;
+    padding: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,12 +69,12 @@ strong {
 
 .name {
     position: relative;
-    font-size: 4rem;
+    font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     word-spacing: 2px;
     font-weight: 200;
-    margin-bottom: 1rem;
+    //margin-bottom: 1rem;
 }
 
 .score {
@@ -84,28 +84,12 @@ strong {
     margin-bottom: auto;
 }
 
-.player--active {
-    background-color: rgba(255, 255, 255, 0.4);
-}
-
-.player--active .name {
-    font-weight: 700;
-}
-
-.player--active .score {
-    font-weight: 400;
-}
-
-.player--active .current {
-    opacity: 1;
-}
-
 .current {
     background-color: #36c76e;
     opacity: 0.8;
     border-radius: 9px;
     color: #fff;
-    width: 65%;
+    width: 75%;
     padding: 2rem;
     text-align: center;
     transition: all 0.75s;
@@ -183,12 +167,9 @@ img {
 
 #round {
   position: fixed;
-  top: 20%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 270px;
-  height: 100px;
-  background-color: #F7FF00;
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
@@ -196,16 +177,23 @@ img {
   animation: fade-in 1s ease-in forwards; /* Apply fade-in animation */
 }
 
-
-
-.dice {
-    position: absolute;
-    left: 50%;
-    top: 16.5rem;
-    transform: translateX(-50%);
-    height: 3rem;
-    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+img {
+  width: 20%; 
+  height: auto; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 10px;
 }
+
+.round-img {
+  width: 40%; 
+  height: auto; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 10px;
+}
+Adjust the CSS styles according to your requirements.
+
 
 .player--winner {
     background-color: #2f2f2f;

@@ -29,8 +29,8 @@
                 }
             }
             round++;
-            roundNumber.innerHTML += "<h1>ROUND " + round + "</h1><br><br>";
-            
+            roundNumber.innerHTML += "<img class='round-img' src='product-images/round" + round + ".jpg'><br><br>";
+
             setTimeout(playerTurn, 1000);
             setTimeout(computerTurn, 2000);
             
@@ -51,7 +51,9 @@
             output1.innerHTML = "";
             output1.innerHTML += "<strong>ROUND score: " + playerRoundScore + "</strong><br><br>";
             output1.innerHTML += "<strong>Dices Rolled: " + playerDice1 + "  " + playerDice2 + "</strong><br><br>";
-            output1.innerHTML += "<img src='product-images/dice" + playerDice1 + ".jpg'><img src='product-images/dice" + playerDice2 + ".jpg'><br><br>";
+output1.innerHTML += "<img src='product-images/dice" + playerDice1 + ".jpg'><br>";
+output1.innerHTML += "<img src='product-images/dice" + playerDice2 + ".jpg'>";
+
 
             // Update the current score in the HTML for player 1
             var currentScoreElement1 = document.getElementById("current--0");
@@ -76,7 +78,10 @@
                 output2.innerHTML = "";
                 output2.innerHTML += "<strong>ROUND score: " + computerRoundScore + "</strong><br><br>";
                 output2.innerHTML += "<strong>Dices Rolled: " + computerDice1 + "  " + computerDice2 + "</strong><br><br>";
-                output2.innerHTML += "<img src='product-images/dice" + computerDice1 + ".jpg'><img src='product-images/dice" + computerDice2 + ".jpg'><br><br>";
+
+output2.innerHTML += "<img src='product-images/dice" + computerDice1 + ".jpg'><br>";
+output2.innerHTML += "<img src='product-images/dice" + computerDice2 + ".jpg'>";
+
 
                 // Update the current score in the HTML for player 2 (computer)
                 var currentScoreElement2 = document.getElementById("current--1");
