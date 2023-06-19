@@ -19,14 +19,15 @@ body {
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
     height: 100vh;
-    color: #333;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('product-images/background.jpg');
+    background-image: url('../product-images/background.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-/* LAYOUT */
+
 main {
     position: relative;
     width: 120rem;
@@ -77,33 +78,14 @@ strong {
     //margin-bottom: 1rem;
 }
 
-.score {
-    font-size: 8rem;
-    font-weight: 300;
-    color: #36c76e;
-    margin-bottom: auto;
-}
-
 .current {
-    background-color: #36c76e;
-    opacity: 0.8;
+    background-color: linear-gradient(rgba(125, 65, 120, 0.8), navy);
     border-radius: 9px;
     color: #fff;
-    width: 75%;
+    width: 80%;
     padding: 2rem;
     text-align: center;
     transition: all 0.75s;
-}
-
-.current-label {
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    font-size: 1.7rem;
-    color: #ddd;
-}
-
-.current-score {
-    font-size: 3.5rem;
 }
 
 button {
@@ -144,11 +126,6 @@ button:focus {
     outline: none;
 }
 
-img {
-    max-width: 100%;
-    height: 10rem;
-}
-
 #final-results {
   position: fixed;
   top: 45%;
@@ -186,22 +163,11 @@ img {
 }
 
 .round-img {
-  width: 40%; 
+  width: 50%; 
   height: auto; 
   border-radius: 5px; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   margin-bottom: 10px;
-}
-Adjust the CSS styles according to your requirements.
-
-
-.player--winner {
-    background-color: #2f2f2f;
-}
-
-.player--winner .name {
-    font-weight: 700;
-    color: #36c76e;
 }
 
 .hidden {
