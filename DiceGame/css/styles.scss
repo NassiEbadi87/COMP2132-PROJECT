@@ -1,0 +1,186 @@
+$primary-color: #36c76e;
+$secondary-color: navy;
+
+@mixin button-styling {
+    color: #444;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.2s;
+    background-color: $primary-color;
+    background-color: rgba($primary-color, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 0.7rem 2.5rem;
+    border-radius: 50rem;
+    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+@import "fonts";
+@import "normalize";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../product-images/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    position: relative;
+    width: 120rem;
+    height: 60rem;
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(200px);
+    filter: blur();
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    overflow: hidden;
+    display: flex;
+}
+
+strong {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#author {
+    position: fixed;
+    top: 7%;
+    left: 50%;
+    width: 570px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    font-size: 3rem;
+    color: #006400;
+    font-weight: 700;
+}
+
+.player {
+    flex: 50%;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.75s;
+}
+
+.name {
+    position: relative;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 200;
+}
+
+.current {
+    background-color: linear-gradient(rgba(125, 65, 120, 0.8), $secondary-color);
+    border-radius: 9px;
+    color: #fff;
+    width: 80%;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.75s;
+}
+
+button {
+    @include button-styling;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &:active {
+        transform: translate(-50%, 3px);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+#resetButton {
+    top: 45rem;
+}
+
+#rollButton {
+    top: 39.3rem;
+}
+
+#final-results {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 200px;
+    background-color: #c2e6c2;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    opacity: 0; 
+    animation: fade-in 1s ease-in forwards;
+}
+
+#round {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    opacity: 0;
+    animation: fade-in 1s ease-in forwards;
+}
+
+img {
+    width: 20%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.round-img {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
