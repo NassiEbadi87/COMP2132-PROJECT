@@ -45,7 +45,7 @@ function playerTurn() {
     playerTotalScore += playerRoundScore;
     playerRound++;
 
-    // Display the player's roll results in output1
+    // Player roll in output1
     var output1 = document.getElementById("output1");
     output1.innerHTML = "<h1>Total Score<br>" + playerTotalScore + "<br></h1>";
     output1.innerHTML += "<strong>Round Score: " + playerRoundScore + "</strong><br><br>";
@@ -61,14 +61,14 @@ function computerTurn() {
         computerTotalScore += computerRoundScore;
         computerRound++;
 
-        // Display the computer's roll results in output2
+        // Computer roll in output2
         var output2 = document.getElementById("output2");
         output2.innerHTML = "<h1>Total Score<br>" + computerTotalScore + "<br></h1>";
         output2.innerHTML += "<strong>Round Score: " + computerRoundScore + "</strong><br><br>";
         output2.innerHTML += "<img src='product-images/dice" + computerDice1 + ".jpg'><br>";
         output2.innerHTML += "<img src='product-images/dice" + computerDice2 + ".jpg'>";
 
-        // Check if it's the end of the game
+        // Check the end of the game
         if (playerRound === 3 && computerRound === 3) {
             gameResult();
         }
@@ -126,18 +126,17 @@ function fadeIn(element) {
 		            finalResults.innerHTML += "<strong>" + winner + " wins the game!</strong><br><br><br>";
 	}   
 
-            // Display final results and winner with fade-in animation
+            // Final results
             finalResults.innerHTML += "<strong>Player 1 score: " + playerTotalScore + "<br><br></strong>";
             finalResults.innerHTML += "<strong>Player 2 score: " + computerTotalScore + "<br><br></strong>";
 
-            // Show the final results section with fade-in animation
             finalResults.classList.remove("hidden");
             finalResults.classList.add("fade-in");
 
-            // Disable the roll button
+            // Roll button
             document.getElementById("rollButton").disabled = true;
 
-            // Animation for fading in the opacity
+            // Animation
             var opacityValue = 0;
             var animationHandler = requestAnimationFrame(function fadeInStep() {
                 opacityValue += 0.05;
